@@ -25,7 +25,7 @@ const NavInteractive = ({ items }: { items: TNavItems[] }) => {
               {isActive && (
                 <motion.span
                   layoutId='active-pill'
-                  className='yellow-shadow absolute inset-0 -z-10 rounded-full bg-white/10'
+                  className='yellow-shadow absolute inset-0 -z-10 rounded-lg bg-white/10'
                   transition={{
                     type: 'spring',
                     stiffness: 500,
