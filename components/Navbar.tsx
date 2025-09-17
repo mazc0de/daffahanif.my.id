@@ -28,13 +28,18 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
   }, [])
 
   return (
-    <div className='relative'>
-      <div className='sticky top-0 z-50 mx-4 pt-8'>
+    <>
+      {/* Navbar Container - Fixed positioning untuk memastikan sticky behavior */}
+      <div className='fixed top-0 right-0 left-0 z-50 px-4 pt-8'>
         <motion.nav
           initial={{ y: -20, opacity: 0 }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.4 }}
-          className='container mx-auto max-w-6xl rounded-2xl bg-[var(--glass)] p-4 backdrop-blur supports-[backdrop-filter]:bg-white/5'
+          className={`container mx-auto max-w-6xl rounded-2xl p-4 backdrop-blur transition-all duration-300 ${
+            isScrolled
+              ? 'bg-white/10 shadow-lg'
+              : 'bg-[var(--glass)] supports-[backdrop-filter]:bg-white/5'
+          }`}
         >
           <div className='flex items-center justify-between'>
             <div className='flex items-center gap-2'>
@@ -43,9 +48,15 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
                 alt='dh-logo'
                 width={42}
                 height={42}
-                className={`rounded-md transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:rotate-[360deg] ${isScrolled ? 'scale-90' : 'scale-100'}`}
+                className={`rounded-md transition-all duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)] hover:rotate-[360deg] ${
+                  isScrolled ? 'scale-90' : 'scale-100'
+                }`}
               />
-              <span className='text-xs tracking-widest text-white/70'>
+              <span
+                className={`text-xs tracking-widest transition-colors duration-300 ${
+                  isScrolled ? 'text-white/90' : 'text-white/70'
+                }`}
+              >
                 DAFFA HANIFISYAFIQ
               </span>
             </div>
@@ -54,6 +65,11 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
           </div>
         </motion.nav>
       </div>
+
+      {/* Spacer untuk memberikan ruang agar content tidak tertutup navbar */}
+      {/* <div className='h-24'></div> */}
+
+      {/* Sidebar */}
       <div
         className={`bg-primary fixed top-0 right-0 z-[100] h-screen w-[50%] max-w-sm shadow-2xl transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -76,13 +92,15 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
           })} */}
         </div>
       </div>
+
+      {/* Backdrop overlay */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
           className='bg-primary/10 fixed inset-0 z-[90] backdrop-blur-sm'
         ></div>
       )}
-    </div>
+    </>
   )
 }
 

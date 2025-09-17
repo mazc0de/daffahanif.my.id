@@ -1,35 +1,20 @@
+import About from '@/components/About'
+import BackgroundOrbs from '@/components/BackgroundOrbs'
+import Hero from '@/components/Hero'
+import Journey from '@/components/Journey'
 import Navbar from '@/components/Navbar'
 import { navItems } from '@/constant/navItems'
 
 const Home = () => {
   return (
-    <main className='min-h-screen scroll-smooth bg-[#0b0b0e] text-white [--glow:rgba(126,231,135,0.25)] [--ring:#7ee787]'>
-      <Navbar items={navItems} />
-
-      <section
-        id='home'
-        className='container mx-auto min-h-[100svh] max-w-6xl px-4 pt-32'
-      >
-        <h1 className='text-4xl font-semibold'>Home</h1>
-      </section>
-      <section
-        id='about'
-        className='container mx-auto min-h-[100svh] max-w-6xl px-4 pt-32'
-      >
-        <h2 className='text-3xl font-semibold'>About</h2>
-      </section>
-      <section
-        id='journey'
-        className='container mx-auto min-h-[100svh] max-w-6xl px-4 pt-32'
-      >
-        <h2 className='text-3xl font-semibold'>My Journey</h2>
-      </section>
-      <section
-        id='projects'
-        className='container mx-auto min-h-[100svh] max-w-6xl px-4 pt-32'
-      >
-        <h2 className='text-3xl font-semibold'>Projects</h2>
-      </section>
+    <main className='min-h-screen scroll-smooth bg-neutral-950 bg-[radial-gradient(1200px_800px_at_10%_-10%,rgba(251,235,4,0.08),transparent),radial-gradient(800px_500px_at_110%_10%,rgba(251,235,4,0.06),transparent)] text-white [--glow:rgba(126,231,135,0.25)] [--ring:#7ee787]'>
+      <main className='container mx-auto max-w-6xl px-4'>
+        <Navbar items={navItems} />
+        <Hero />
+        <About />
+        <Journey />
+      </main>
+      <BackgroundOrbs />
     </main>
   )
 }
