@@ -46,6 +46,7 @@
     Helvetica Neue, Arial;
   --font-heading: var(--_rethink), var(--font-body);
   --font-sans: var(--font-body);
+  --color-primary: #fbeb04;
 }
 
 :root {
