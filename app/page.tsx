@@ -1,5 +1,6 @@
 import About from '@/components/About'
 import BackgroundOrbs from '@/components/BackgroundOrbs'
+import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Journey from '@/components/Journey'
 import Navbar from '@/components/Navbar'
@@ -13,6 +14,7 @@ const Home = () => {
         <Hero />
         <About />
         <Journey />
+        <Footer />
       </main>
       <BackgroundOrbs />
     </main>
