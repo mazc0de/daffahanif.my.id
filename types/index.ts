@@ -20,3 +20,11 @@ export interface TJourney {
   detail: string
   jobDescription: TJobDescription[]
 }
+
+export interface TProject {
+  title: string
+  image: string
+  description: string
+  tech: string[]
+  link: string
+}

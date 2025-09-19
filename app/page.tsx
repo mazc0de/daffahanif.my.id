@@ -4,6 +4,7 @@ import Footer from '@/components/Footer'
 import Hero from '@/components/Hero'
 import Journey from '@/components/Journey'
 import Navbar from '@/components/Navbar'
+import Projects from '@/components/Projects'
 import { navItems } from '@/constant/navItems'
 
 const Home = () => {
@@ -14,6 +15,7 @@ const Home = () => {
         <Hero />
         <About />
         <Journey />
+        <Projects />
         <Footer />
       </main>
       <BackgroundOrbs />
