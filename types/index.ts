@@ -1,3 +1,5 @@
+import type { LucideIcon } from 'lucide-react'
+
 export type TNavItems = {
   id: string
   label: string
@@ -27,4 +29,10 @@ export interface TProject {
   description: string
   tech: string[]
   link: string
+}
+
+export type TSocialMedia = {
+  label: string
+  icon: LucideIcon
+  href: string
 }

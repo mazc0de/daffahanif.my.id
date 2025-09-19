@@ -4,6 +4,7 @@ import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
 
+import { fadeDown } from '@/lib/utils'
 import type { TNavItems } from '@/types'
 
 import NavSidebarBtn from './NavSidebarBtn'
@@ -29,12 +30,14 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
 
   return (
     <>
-      {/* Navbar Container - Fixed positioning untuk memastikan sticky behavior */}
-      <div className='fixed top-0 right-0 left-0 z-50 px-4 pt-8'>
-        <motion.nav
-          initial={{ y: -20, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.4 }}
+      <motion.nav
+        initial='hidden'
+        whileInView='visible'
+        viewport={{ once: true, amount: 0.3 }}
+        variants={fadeDown}
+        className='fixed top-0 right-0 left-0 z-50 px-4 pt-8'
+      >
+        <div
           className={`container mx-auto max-w-6xl rounded-2xl p-4 backdrop-blur transition-all duration-300 ${
             isScrolled
               ? 'bg-white/10 shadow-lg'
@@ -63,11 +66,8 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
             <NavInteractive items={items} />
             <NavSidebarBtn isOpen={isOpen} handleOpen={handleOpen} />
           </div>
-        </motion.nav>
-      </div>
-
-      {/* Spacer untuk memberikan ruang agar content tidak tertutup navbar */}
-      {/* <div className='h-24'></div> */}
+        </div>
+      </motion.nav>
 
       {/* Sidebar */}
       <div

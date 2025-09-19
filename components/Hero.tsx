@@ -1,10 +1,15 @@
 'use client'
 
+import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, Github, Linkedin, Mail } from 'lucide-react'
-import { Button } from './ui/button'
+import { ArrowRight, Mail } from 'lucide-react'
+
 import IconLink from './IconLink'
+import { Button } from './ui/button'
+
 import { fadeUp } from '@/lib/utils'
+import { TSocialMedia } from '@/types'
+import { socialMedia } from '@/constant/socialMedia'
 
 const Hero = () => {
   return (
@@ -41,26 +46,38 @@ const Hero = () => {
               asChild
               className='rounded-full bg-[var(--accent)] text-black hover:opacity-90'
             >
-              <a href='#projects' className='inline-flex items-center'>
-                Lihat Projects <ArrowRight className='ml-2 h-4 w-4' />
-              </a>
+              <Link
+                href='#projects'
+                className='group inline-flex items-center transition-all'
+              >
+                View Project{' '}
+                <ArrowRight className='h-4 w-4 transform transition-transform duration-300 group-hover:translate-x-1' />
+              </Link>
             </Button>
             <Button
               variant='outline'
               asChild
-              className='rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10'
+              className='rounded-full border-white/20 bg-white/5 text-white hover:bg-white/10 hover:text-white/80'
             >
-              <a
-                href='mailto:daffa@example.com'
+              <Link
+                href='mailto:dandroid36@gmail.com'
                 className='inline-flex items-center'
               >
                 <Mail className='mr-2 h-4 w-4' />
                 Contact
-              </a>
+              </Link>
             </Button>
             <div className='ml-auto flex items-center gap-2'>
-              <IconLink href='#' label='GitHub' Icon={Github} />
-              <IconLink href='#' label='LinkedIn' Icon={Linkedin} />
+              {socialMedia?.map((item: TSocialMedia, index: number) => {
+                return (
+                  <IconLink
+                    key={index}
+                    href={item.href}
+                    label={item.label}
+                    Icon={item.icon}
+                  />
+                )
+              })}
             </div>
           </div>
         </div>
