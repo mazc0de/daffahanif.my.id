@@ -5,11 +5,11 @@ import Image from 'next/image'
 
 const About = () => {
   return (
-    <section id='about' className='relative scroll-mt-24 pt-24'>
+    <section id='about' className='relative scroll-mt-24 pt-16 lg:pt-24'>
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.1 }}
         variants={fadeUp}
         className='mx-auto w-full'
       >

@@ -7,11 +7,11 @@ import { TJourney } from '@/types'
 
 const Journey = () => {
   return (
-    <section id='journey' className='relative scroll-mt-24 pt-24'>
+    <section id='journey' className='relative scroll-mt-24 pt-16 lg:pt-24'>
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true }}
         variants={fadeUp}
         className='mx-auto w-full'
       >
@@ -25,7 +25,7 @@ const Journey = () => {
                 custom={idx}
                 initial='hidden'
                 whileInView='visible'
-                viewport={{ once: true, amount: 0.3 }}
+                viewport={{ once: true, amount: 0 }}
                 variants={fadeUp}
                 className='group'
               >

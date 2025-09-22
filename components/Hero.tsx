@@ -13,11 +13,11 @@ import { socialMedia } from '@/constant/socialMedia'
 
 const Hero = () => {
   return (
-    <section id='home' className='relative pt-44'>
+    <section id='home' className='relative scroll-mt-24 pt-44'>
       <motion.div
         initial='hidden'
         whileInView='visible'
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 1 }}
         variants={fadeUp}
         className='mx-auto flex h-full w-full items-center'
       >
