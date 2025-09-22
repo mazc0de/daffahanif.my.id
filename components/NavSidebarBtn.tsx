@@ -4,7 +4,7 @@ const NavSidebarBtn = ({ isOpen, handleOpen }: TNavSidebar) => {
   return (
     <div className='md:hidden'>
       <button
-        className={`group fixed top-3 right-6 z-[150] transition-all duration-300 ease-in-out lg:hidden`}
+        className={`group fixed top-11 right-6 z-[110] transition-all duration-300 ease-in-out lg:hidden`}
         onClick={handleOpen}
       >
         <div className='relative flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden rounded-full transition-all duration-200'>

@@ -1,5 +1,6 @@
 'use client'
 
+import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
@@ -64,40 +65,39 @@ const Navbar = ({ items }: { items: TNavItems[] }) => {
               </span>
             </div>
             <NavInteractive items={items} />
-            <NavSidebarBtn isOpen={isOpen} handleOpen={handleOpen} />
           </div>
         </div>
       </motion.nav>
+      <NavSidebarBtn isOpen={isOpen} handleOpen={handleOpen} />
 
       {/* Sidebar */}
       <div
-        className={`bg-primary fixed top-0 right-0 z-[100] h-screen w-[50%] max-w-sm shadow-2xl transition-transform duration-500 ease-in-out ${
+        className={`fixed top-0 right-0 z-[100] h-screen w-[75%] max-w-sm bg-white/15 shadow-2xl transition-transform duration-500 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
       >
         <div className='flex h-full flex-col items-center justify-center gap-3 p-4'>
-          {/* {NAV_MENU?.map((item: TNavMenu, index: number) => {
+          {items?.map((item, index: number) => {
             return (
               <Link
-                href={item.href}
+                href={`#${item.id}`}
                 key={index}
                 className='w-full'
                 onClick={() => setIsOpen(false)}
               >
-                <div className='border-wood flex w-full items-center justify-center rounded-lg border py-3'>
+                <div className='border-wood flex w-full items-center justify-center rounded-lg py-3'>
                   <p className='text-wood font-semibold'>{item.label}</p>
                 </div>
               </Link>
             )
-          })} */}
+          })}
         </div>
       </div>
-
       {/* Backdrop overlay */}
       {isOpen && (
         <div
           onClick={() => setIsOpen(false)}
-          className='bg-primary/10 fixed inset-0 z-[90] backdrop-blur-sm'
+          className='fixed inset-0 z-[90] bg-white/10 backdrop-blur-sm'
         ></div>
       )}
     </>

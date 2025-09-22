@@ -8,7 +8,6 @@ import { useActiveSection } from '@/hooks/useActiveSection'
 
 const NavInteractive = ({ items }: { items: TNavItems[] }) => {
   const active = useActiveSection(items.map(i => i.id))
-  console.log(active)
 
   return (
     <nav className={`hidden items-center gap-1 bg-transparent md:flex`}>
