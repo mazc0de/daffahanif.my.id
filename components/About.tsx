@@ -26,19 +26,19 @@ const About = () => {
           <div>
             <h2 className='text-2xl font-semibold'>About Me</h2>
             <p className='mt-3 text-white/70'>
-              I've always been fascinated by technology—though to be honest, I
-              don't just use it… I wrestle with it until it turns into code. For
-              me, web development feels like a giant playground: except instead
-              of swings and slides, I get bugs and deploy errors (and somehow, I
-              still love it).
+              I&apos;ve always been fascinated by technology—though to be
+              honest, I don&apos;t just use it… I wrestle with it until it turns
+              into code. For me, web development feels like a giant playground:
+              except instead of swings and slides, I get bugs and deploy errors
+              (and somehow, I still love it).
             </p>
             <p className='mt-3 text-white/70'>
-              The more I learn, the more I realize how much I don't know— and
-              honestly, that's the fun part. It keeps life surprising, like a
-              software update that actually improves performance.
+              The more I learn, the more I realize how much I don&apos;t know—
+              and honestly, that&apos;s the fun part. It keeps life surprising,
+              like a software update that actually improves performance.
             </p>
             <p className='mt-3 text-white/70'>
-              Oh, and before I forget: right now I'm working as a Frontend
+              Oh, and before I forget: right now I&apos;m working as a Frontend
               Developer / Junior Software Engineer at Mitra Kasih Perkasa. I
               helped build an e-ticketing system that makes booking ship tickets
               a breeze for passengers.

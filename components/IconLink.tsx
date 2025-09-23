@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { LucideIcon } from 'lucide-react'
 
 const IconLink = ({
   href,
@@ -7,7 +8,7 @@ const IconLink = ({
 }: {
   href: string
   label: string
-  Icon: any
+  Icon: LucideIcon
 }) => {
   return (
     <Link

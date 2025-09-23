@@ -33,7 +33,7 @@ const Hero = () => {
           </div>
 
           <motion.h1 className='text-3xl font-semibold md:text-5xl'>
-            <span className='text-white/80'>Hi, I'm</span>{' '}
+            <span className='text-white/80'>Hi, I&apos;m</span>{' '}
             <span className='text-primary'>Daffa Hanifisyafiq</span>
           </motion.h1>
           <p className='mt-4 max-w-2xl text-base text-white/70 md:text-lg'>

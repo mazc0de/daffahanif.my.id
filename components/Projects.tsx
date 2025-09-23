@@ -1,5 +1,4 @@
 'use client'
-import Link from 'next/link'
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
@@ -13,7 +12,6 @@ import {
 import { Badge } from '@/components/ui/badge'
 import { projects } from '@/constant/projects'
 import { fadeUp } from '@/lib/utils'
-import { Button } from './ui/button'
 import { TProject } from '@/types'
 
 const Projects = () => {
