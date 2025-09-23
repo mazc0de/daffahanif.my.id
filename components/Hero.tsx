@@ -47,6 +47,7 @@ const Hero = () => {
               className='rounded-full bg-[var(--accent)] text-black hover:opacity-90'
             >
               <Link
+                data-cursor='link'
                 href='#projects'
                 className='group inline-flex items-center transition-all'
               >
