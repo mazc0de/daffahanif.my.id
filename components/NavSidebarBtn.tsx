@@ -1,6 +1,7 @@
+import Link from 'next/link'
 import { TNavSidebar } from '@/types'
 
-const NavSidebarBtn = ({ isOpen, handleOpen }: TNavSidebar) => {
+const NavSidebarBtn = ({ isOpen, handleOpen, items }: TNavSidebar) => {
   return (
     <div className='md:hidden'>
       <button
@@ -45,6 +46,36 @@ const NavSidebarBtn = ({ isOpen, handleOpen }: TNavSidebar) => {
           </div>
         </div>
       </button>
+      {/* Sidebar */}
+      <div
+        className={`fixed top-0 right-0 z-[100] h-screen w-[75%] max-w-sm bg-white/15 shadow-2xl transition-transform duration-500 ease-in-out ${
+          isOpen ? 'translate-x-0' : 'translate-x-full'
+        }`}
+      >
+        <div className='flex h-full flex-col items-center justify-center gap-3 p-4'>
+          {items?.map((item, index: number) => {
+            return (
+              <Link
+                href={`#${item.id}`}
+                key={index}
+                className='w-full'
+                onClick={handleOpen}
+              >
+                <div className='border-wood flex w-full items-center justify-center rounded-lg py-3'>
+                  <p className='text-wood font-semibold'>{item.label}</p>
+                </div>
+              </Link>
+            )
+          })}
+        </div>
+      </div>
+      {/* Backdrop overlay */}
+      {isOpen && (
+        <div
+          onClick={handleOpen}
+          className='fixed inset-0 z-[90] bg-white/10 backdrop-blur-sm'
+        ></div>
+      )}
     </div>
   )
 }

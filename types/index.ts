@@ -8,6 +8,7 @@ export type TNavItems = {
 export type TNavSidebar = {
   isOpen: boolean
   handleOpen: () => void
+  items: TNavItems[]
 }
 
 export interface TJobDescription {
