@@ -33,7 +33,7 @@ const Projects = () => {
           <h2 className='text-2xl font-semibold'>Projects</h2>
           <span className='text-xs text-white/60'>Showcase</span>
         </div>
-        <div className='grid gap-6 md:grid-cols-2 [&:hover_.card:not(:hover)]:opacity-50'>
+        <div className='grid gap-6 md:grid-cols-3 [&:hover_.card:not(:hover)]:opacity-50'>
           {projects.map((item: TProject, idx) => (
             <motion.div
               key={item.title}
