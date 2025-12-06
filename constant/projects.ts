@@ -48,5 +48,19 @@ export const projects: TProject[] = [
       'Mini BMS Lifestyle is a ferry ticket booking application similar to Tiketkapal.com, available on the Livin Sukha Lifestyle page. It is directly integrated with Bank Mandiri payment services, enabling users to conveniently search schedules, book tickets, and complete secure transactions.',
     tech: ['Next.js', 'Tailwind CSS'],
     link: '#'
+  },
+  {
+    title: 'Astra Visteon',
+    image: '/images/astra-visteon.webp',
+    description: `This is a web-based application designed to streamline and manage continuous improvement initiatives using the PDCA (Plan-Do-Check-Action) methodology. It helps teams monitor every stage of the improvement cycle with clear visibility, structured workflows, and intuitive tracking tools, enabling more effective problem-solving and sustained operational excellence.`,
+    tech: ['React.js', 'Tailwind CSS'],
+    link: '#'
+  },
+  {
+    title: 'SPC Auto Detailing',
+    image: '/images/spc-autodetailing.webp',
+    description: `A landing page designed to showcase a vehicle detailing and coating business. It highlights the services offered—such as premium detailing, paint protection, and high-quality ceramic coating—while presenting a clean, modern layout that builds trust and captures customer interest. The page focuses on visual appeal, clear service information, and strong calls-to-action to help convert visitors into clients.`,
+    tech: ['React.js', 'Tailwind CSS'],
+    link: '#'
   }
 ]
