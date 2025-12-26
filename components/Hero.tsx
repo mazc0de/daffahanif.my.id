@@ -37,7 +37,7 @@ const Hero = () => {
             <span className='text-primary'>Daffa Hanifisyafiq</span>
           </motion.h1>
           <p className='mt-4 max-w-2xl text-base text-white/70 md:text-lg'>
-            Currently battling bugs in the JavaScript universe, especially on
+            Currently battling bugs in the javascript universe, especially on
             the frontend side of the web.
           </p>
 
