@@ -34,16 +34,18 @@ const About = () => {
               and deploy errors (and somehow, I still love it).
             </p>
             <p className='mt-3 text-white/70'>
-              The more I learn, the more I realize how much I don&apos;t know—
-              and honestly, that&apos;s the fun part. It keeps life surprising,
-              like a software update that actually improves performance.
+              <span className='font-semibold'>The more I learn</span>, the more
+              I realize how much I don&apos;t know— and honestly, that&apos;s
+              the fun part. It keeps life surprising, like a software update
+              that actually improves performance.
             </p>
             <p className='mt-3 text-white/70'>
               Oh, and before I forget: right now I&apos;m working as a{' '}
               <span className='font-semibold'>
                 Frontend Developer / Junior Software Engineer
               </span>{' '}
-              at Mitra Kasih Perkasa. I helped build an e-ticketing system that
+              at Mitra Kasih Perkasa. I helped build an{' '}
+              <span className='font-semibold'>e-ticketing system</span> that
               makes booking ship tickets a breeze for passengers.
             </p>
           </div>
