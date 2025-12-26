@@ -11,7 +11,7 @@ export const journey: TJourney[] = [
       {
         id: 1,
         description:
-          'Developed and maintained a comprehensive e-ticketing system in collaboration with domestic ports, supporting ticket booking via website, self-service kiosks, and physical counters.'
+          'Developed and maintained a comprehensive e-ticketing system in collaboration with domestic ports, supporting ticket booking via website, self-service kiosks, and ticket counter.'
       },
       {
         id: 2,
@@ -31,7 +31,7 @@ export const journey: TJourney[] = [
       {
         id: 5,
         description:
-          'Ensured consistent design and performance across multiple access points (web, kiosk, and counter).'
+          'Ensured consistent design and performance across multiple access points (web, kiosk, and ticket counter).'
       },
       {
         id: 6,
