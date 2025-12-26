@@ -37,8 +37,9 @@ const Hero = () => {
             <span className='text-primary'>Daffa Hanifisyafiq</span>
           </motion.h1>
           <p className='mt-4 max-w-2xl text-base text-white/70 md:text-lg'>
-            Currently battling bugs in the javascript universe, especially on
-            the frontend side of the web.
+            Currently battling <span className='font-semibold'>bugs</span> in
+            the <span className='font-semibold'>javascript</span> universe,
+            especially on the frontend side of the web.
           </p>
 
           <div className='mt-6 flex flex-wrap items-center gap-2'>
